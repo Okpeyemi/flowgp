@@ -6,7 +6,7 @@ import Link from "next/link";
 export default function Section1() {
   return (
     <section className="relative overflow-hidden bg-white font-sans">
-      <div className="max-w-7xl mx-auto grid gap-10 lg:grid-cols-2 items-center px-4 sm:px-6 lg:px-8 py-16 lg:py-24 mb-50">
+      <div className="max-w-7xl mx-auto grid gap-10 lg:grid-cols-2 items-center px-4 sm:px-6 lg:px-8 py-16 lg:py-24 mb-50 max-md:mb-30">
         <div>
           <h1 className="font-mono leading-tight text-4xl md:text-5xl lg:text-[64px] font-black">
             <span className="text-blue">FlowGP</span>

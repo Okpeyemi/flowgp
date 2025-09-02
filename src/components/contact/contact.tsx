@@ -45,7 +45,7 @@ export default function ContactForm() {
 
           {/* Téléphone avec étiquette à gauche */}
           <div className="flex gap-2">
-            <span className="select-none rounded-[12px] bg-[#F0F0F0] px-5 py-4 text-black/80">
+            <span className="select-none rounded-[12px] bg-[#F0F0F0] px-5 py-4 text-black/80 max-md:hidden">
               Téléphone
             </span>
             <input
