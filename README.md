@@ -2,8 +2,6 @@
 
 Un projet web basé sur Next.js 15 et React 19, écrit en TypeScript, conçu pour offrir des performances élevées et une expérience développeur moderne (Turbopack, ESlint, Tailwind CSS v4).
 
-> Remplacez ce paragraphe par une description claire de votre application (objectif, public cible, fonctionnalités principales).
-
 ## Sommaire
 - [Aperçu](#aperçu)
 - [Technologies](#technologies)
@@ -12,9 +10,7 @@ Un projet web basé sur Next.js 15 et React 19, écrit en TypeScript, conçu pou
 - [Démarrage](#démarrage)
 - [Scripts disponibles](#scripts-disponibles)
 - [Structure du projet (indicative)](#structure-du-projet-indicative)
-- [Configuration Tailwind CSS v4](#configuration-tailwind-css-v4)
 - [Qualité et linting](#qualité-et-linting)
-- [Variables d’environnement](#variables-denvironnement)
 - [Déploiement](#déploiement)
 - [Dépannage](#dépannage)
 - [Roadmap](#roadmap)
@@ -33,9 +29,6 @@ Un projet web basé sur Next.js 15 et React 19, écrit en TypeScript, conçu pou
 - Langage: TypeScript
 - Styles: Tailwind CSS `v4`
 - Linting: ESlint `^9` + `eslint-config-next`
-
-Screenshots / GIFs:
-- Ajoutez ici 1–3 captures d’écran ou gifs présentant les principaux écrans ou parcours utilisateurs.
 
 ## Technologies
 
@@ -62,9 +55,6 @@ Cloner le dépôt puis installer les dépendances:
 git clone https://github.com/Okpeyemi/flowgp.git
 cd flowgp
 npm install
-# ou
-# pnpm install
-# yarn install
 ```
 
 ## Démarrage
@@ -111,30 +101,6 @@ flowgp/
 └─ tsconfig.json
 ```
 
-> Si vous utilisez le Pages Router (pages/), ajustez en conséquence.
-
-## Configuration Tailwind CSS v4
-
-Tailwind v4 simplifie la configuration. Typiquement, il suffit d’importer Tailwind dans votre feuille de style globale (par ex. `app/globals.css` ou `styles/globals.css`):
-
-```css
-@import "tailwindcss";
-```
-
-Ensuite, utilisez les classes utilitaires directement dans vos composants React:
-
-```tsx
-export default function Button() {
-  return (
-    <button className="rounded-md bg-blue-600 px-4 py-2 text-white hover:bg-blue-700">
-      Action
-    </button>
-  );
-}
-```
-
-> Adaptez si vous avez une configuration personnalisée de Tailwind/PostCSS.
-
 ## Qualité et linting
 
 Lancer le lint:
@@ -145,18 +111,6 @@ npm run lint
 - Le projet utilise `eslint-config-next` pour des règles adaptées à Next.js.
 - Intégrez ESLint dans votre IDE pour un feedback en temps réel.
 
-## Variables d’environnement
-
-Si votre application nécessite des variables d’environnement, créez un fichier `.env.local` à la racine:
-
-```bash
-# .env.local
-# NEXT_PUBLIC_API_URL=https://api.exemple.com
-# SECRET_TOKEN=xxxx
-```
-
-- Les variables préfixées par `NEXT_PUBLIC_` sont exposées côté client.
-- Ne commitez pas `.env.local`.
 
 ## Déploiement
 
