@@ -30,8 +30,7 @@ export default function CommentCaMarche() {
     <section className="bg-white font-sans">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
         <h2
-          className="text-center font-mono text-blue text-4xl md:text-5xl lg:text-[40px] font-extrabold"
-          style={{ fontFamily: "var(--font-russoone)" }}
+          className="text-center font-mono text-blue text-4xl md:text-5xl font-normal"
         >
           Notre Méthode pour vos résultats
         </h2>
@@ -42,8 +41,8 @@ export default function CommentCaMarche() {
               key={s.title}
               className="grid md:grid-cols-[1fr_3fr] gap-6 md:gap-10 items-start"
             >
-              <h3 className="text-black text-xl md:text-2xl font-bold">{s.title}</h3>
-              <p className="text-black/80 text-base md:text-lg leading-relaxed">{s.desc}</p>
+              <h3 className="text-black text-2xl md:text-3xl font-bold">{s.title}</h3>
+              <p className="text-black text-base sm:text-lg lg:text-2xl leading-relaxed">{s.desc}</p>
             </div>
           ))}
         </div>

@@ -3,7 +3,7 @@ import { Montserrat, Russo_One } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
-import Contact from "@/components/contact";
+import Newsletter from "@/components/newsletter";
 
 const montserrat = Montserrat({
   variable: "--font-montserrat",
@@ -34,7 +34,7 @@ export default function RootLayout({
       >
         <Header />
         {children}
-        <Contact />
+        <Newsletter />
         <Footer />
       </body>
     </html>

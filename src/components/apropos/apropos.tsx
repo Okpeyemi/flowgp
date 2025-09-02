@@ -5,8 +5,7 @@ export default function Apropos() {
     <section className="bg-white font-sans">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
         <h2
-          className="text-center font-mono text-blue text-4xl md:text-5xl lg:text-[64px] font-normal bg-[#F5F5F5] p-10 w-max-2xl"
-          style={{ fontFamily: "var(--font-russoone)" }}
+          className="text-center font-mono text-blue text-4xl md:text-5xl font-normal bg-[#F5F5F5] py-10 px-40"
         >
           FlowGP : votre allié marketing en Guadeloupe
         </h2>

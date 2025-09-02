@@ -29,7 +29,7 @@ export default function Services() {
   return (
     <section className="bg-white font-sans">
       <div className="max-w-7xl mx-auto flex flex-col items-center px-4 sm:px-6 lg:px-8 py-16 md:py-24">
-        <h2 className="max-w-2xl text-center font-mono text-blue text-4xl md:text-5xl lg:text-[64px] font-normal">
+        <h2 className="max-w-2xl text-center font-mono text-blue text-4xl md:text-5xl font-normal">
           Nos solutions pour votre succès
         </h2>
 
