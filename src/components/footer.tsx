@@ -26,7 +26,7 @@ const ressources = [
 export default function Footer() {
   return (
     <footer className="border-t border-gray-100 bg-white font-sans font-black">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-14">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
         <div className="grid gap-10 md:grid-cols-3">
           <div>
             <h3 className="text-black text-xl font-bold mb-4">Informations</h3>
