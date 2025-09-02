@@ -15,7 +15,7 @@ export default function Contact() {
 
   return (
     <section className={`font-sans ${bgClass} text-white`}>
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-14">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
         <div className="grid gap-10 lg:grid-cols-2 items-start">
           <div className="flex items-start gap-6">
             <Image
