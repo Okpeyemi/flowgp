@@ -3,12 +3,16 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --green: #4CAF50;
+  --blue: #1E88E5;
   color-scheme: light;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-blue: var(--blue);
+  --color-green: var(--green);
   --font-sans: var(--font-montserrat);
   --font-mono: var(--font-russoone);
 }

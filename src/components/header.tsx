@@ -20,7 +20,6 @@ export function Header() {
 			className="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-gray-100 font-sans"
 		>
 			<div className="container mx-auto flex items-center justify-between px-4 sm:px-6 lg:px-8 h-20">
-				{/* Logo */}
 				<Link
 					href="/"
 					className="flex items-center gap-3"
@@ -35,7 +34,6 @@ export function Header() {
 					/>
 				</Link>
 
-				{/* Navigation */}
 				<nav className="hidden md:flex items-center gap-10">
 					{navItems.map((item) => {
 						const active =
@@ -57,7 +55,6 @@ export function Header() {
 					})}
 				</nav>
 
-				{/* Langue */}
 				<div className="flex items-center gap-2">
 					<Image
 						src="/france.png"
