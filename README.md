@@ -1,36 +1,215 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# FlowGP
 
-## Getting Started
+Un projet web basé sur Next.js 15 et React 19, écrit en TypeScript, conçu pour offrir des performances élevées et une expérience développeur moderne (Turbopack, ESlint, Tailwind CSS v4).
 
-First, run the development server:
+> Remplacez ce paragraphe par une description claire de votre application (objectif, public cible, fonctionnalités principales).
 
+## Sommaire
+- [Aperçu](#aperçu)
+- [Technologies](#technologies)
+- [Prérequis](#prérequis)
+- [Installation](#installation)
+- [Démarrage](#démarrage)
+- [Scripts disponibles](#scripts-disponibles)
+- [Structure du projet (indicative)](#structure-du-projet-indicative)
+- [Configuration Tailwind CSS v4](#configuration-tailwind-css-v4)
+- [Qualité et linting](#qualité-et-linting)
+- [Variables d’environnement](#variables-denvironnement)
+- [Déploiement](#déploiement)
+- [Dépannage](#dépannage)
+- [Roadmap](#roadmap)
+- [Contribuer](#contribuer)
+- [Licence](#licence)
+- [Auteur](#auteur)
+
+---
+
+## Aperçu
+
+- Nom du paquet: `flowgp`
+- Version: `0.1.0`
+- Framework: Next.js `15.3.2`
+- Runtime client: React `19`
+- Langage: TypeScript
+- Styles: Tailwind CSS `v4`
+- Linting: ESlint `^9` + `eslint-config-next`
+
+Screenshots / GIFs:
+- Ajoutez ici 1–3 captures d’écran ou gifs présentant les principaux écrans ou parcours utilisateurs.
+
+## Technologies
+
+- Next.js 15 (App Router, build et rendu modernes)
+- React 19
+- TypeScript
+- Tailwind CSS v4
+- ESLint (config Next.js)
+
+## Prérequis
+
+- Node.js: 18.18+, 20+ ou 22+ (recommandé: LTS 20+)
+- Un gestionnaire de paquets: npm, pnpm ou yarn
+
+Vérifier la version de Node:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+node -v
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Installation
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Cloner le dépôt puis installer les dépendances:
+```bash
+git clone https://github.com/Okpeyemi/flowgp.git
+cd flowgp
+npm install
+# ou
+# pnpm install
+# yarn install
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Démarrage
 
-## Learn More
+En mode développement (avec Turbopack):
+```bash
+npm run dev
+```
+- Ouvrez http://localhost:3000 dans votre navigateur.
 
-To learn more about Next.js, take a look at the following resources:
+Build production:
+```bash
+npm run build
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Démarrer en production (après build):
+```bash
+npm run start
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Scripts disponibles
 
-## Deploy on Vercel
+Depuis `package.json`:
+- `npm run dev` — Lance le serveur de dev Next.js avec Turbopack.
+- `npm run build` — Construit l’application pour la production.
+- `npm run start` — Démarre le serveur Next.js en mode production.
+- `npm run lint` — Exécute ESLint sur le projet.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Structure du projet (indicative)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+La structure exacte peut varier selon votre organisation. Mettez-la à jour pour refléter votre arborescence réelle.
+
+```text
+flowgp/
+├─ app/                  # Routes et pages (App Router Next.js)
+│  ├─ layout.tsx
+│  └─ page.tsx
+├─ components/           # Composants UI réutilisables
+├─ lib/                  # Utilitaires, clients, logique partagée
+├─ public/               # Assets statiques (images, favicons, etc.)
+├─ styles/               # Feuilles de style globales
+├─ .eslintrc.*           # Configuration ESLint
+├─ package.json
+└─ tsconfig.json
+```
+
+> Si vous utilisez le Pages Router (pages/), ajustez en conséquence.
+
+## Configuration Tailwind CSS v4
+
+Tailwind v4 simplifie la configuration. Typiquement, il suffit d’importer Tailwind dans votre feuille de style globale (par ex. `app/globals.css` ou `styles/globals.css`):
+
+```css
+@import "tailwindcss";
+```
+
+Ensuite, utilisez les classes utilitaires directement dans vos composants React:
+
+```tsx
+export default function Button() {
+  return (
+    <button className="rounded-md bg-blue-600 px-4 py-2 text-white hover:bg-blue-700">
+      Action
+    </button>
+  );
+}
+```
+
+> Adaptez si vous avez une configuration personnalisée de Tailwind/PostCSS.
+
+## Qualité et linting
+
+Lancer le lint:
+```bash
+npm run lint
+```
+
+- Le projet utilise `eslint-config-next` pour des règles adaptées à Next.js.
+- Intégrez ESLint dans votre IDE pour un feedback en temps réel.
+
+## Variables d’environnement
+
+Si votre application nécessite des variables d’environnement, créez un fichier `.env.local` à la racine:
+
+```bash
+# .env.local
+# NEXT_PUBLIC_API_URL=https://api.exemple.com
+# SECRET_TOKEN=xxxx
+```
+
+- Les variables préfixées par `NEXT_PUBLIC_` sont exposées côté client.
+- Ne commitez pas `.env.local`.
+
+## Déploiement
+
+Options courantes:
+- Vercel (recommandé pour Next.js): connectez le dépôt et laissez la configuration par défaut (Build Command `next build`, Output `.next`).
+- Docker / Node serveur: construisez avec `npm run build` puis lancez `npm run start` derrière un reverse proxy.
+- Autres plateformes (Render, Netlify via adaptateurs, etc.).
+
+Assurez-vous:
+- D’utiliser une version de Node compatible (18.18+, 20+, 22+).
+- De fournir les variables d’environnement nécessaires en production.
+
+## Dépannage
+
+- Erreurs de build liées à Node: vérifiez `node -v` et passez à une version supportée.
+- Classes Tailwind non appliquées: confirmez l’import `@import "tailwindcss";` dans la feuille de style globale et que le fichier est bien chargé par Next.js.
+- Problèmes de modules: supprimez `node_modules` et `package-lock.json`/`pnpm-lock.yaml`/`yarn.lock`, puis réinstallez.
+
+```bash
+rm -rf node_modules
+rm -f package-lock.json pnpm-lock.yaml yarn.lock
+npm install
+```
+
+## Roadmap
+
+- [ ] Décrire les fonctionnalités principales et priorités
+- [ ] Ajouter des tests (unitaires / E2E) et CI
+- [ ] Documenter l’architecture (schémas, décisions)
+- [ ] Ajouter des exemples d’API / d’intégrations externes
+- [ ] Internationalisation (le cas échéant)
+
+## Contribuer
+
+Les contributions sont les bienvenues !
+1. Ouvrez une issue pour discuter d’un changement majeur.
+2. Créez une branche depuis `main`.
+3. Ouvrez une Pull Request claire et documentée.
+
+Lancement local rapide:
+```bash
+git checkout -b feature/ma-fonctionnalite
+npm run dev
+# ...vos changements...
+git commit -m "feat: description de la fonctionnalité"
+git push origin feature/ma-fonctionnalite
+```
+
+## Licence
+
+Indiquez ici la licence du projet (ex: MIT, Apache-2.0).  
+Si aucune licence n’est précisée, le projet est « All rights reserved » par défaut.
+
+## Auteur
+
+- @Okpeyemi — Propriétaire du dépôt
