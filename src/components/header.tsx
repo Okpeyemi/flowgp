@@ -45,7 +45,7 @@ export function Header() {
 								href={item.href}
 								className={`text-base transition-colors ${
 									active
-										? "text-yellow-400 font-bold"
+										? "text-yellow font-bold"
 										: "text-black/80 hover:text-black font-normal"
 								}`}
 							>

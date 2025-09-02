@@ -56,7 +56,7 @@ export default function Contact() {
         <div className="mt-10 flex justify-center">
           <Link
             href="mailto:contact@flowgp.fr?subject=Prise%20de%20contact%20FlowGP"
-            className="bg-yellow-400 text-black font-semibold rounded-full px-6 py-4 shadow hover:opacity-95 transition"
+            className="bg-yellow text-black font-semibold rounded-[20px] px-6 py-4 shadow hover:opacity-95 transition"
           >
             Prêt à démarrer ? Contactez-nous !
           </Link>

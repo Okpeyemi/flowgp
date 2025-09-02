@@ -9,7 +9,7 @@ export default function Section1() {
       <div className="max-w-7xl mx-auto grid gap-10 lg:grid-cols-2 items-center px-4 sm:px-6 lg:px-8 py-16 lg:py-24 mb-50">
         <div>
           <h1 className="font-mono leading-tight text-4xl md:text-5xl lg:text-[64px] font-black">
-            <span className="text-[#1E88E5]">FlowGP</span>
+            <span className="text-blue">FlowGP</span>
             <span className="text-black"> : Boostez</span>
             <br />
             <span className="text-black">vos ventes en</span>
@@ -25,7 +25,7 @@ export default function Section1() {
           <div className="mt-8">
             <Link
               href="/contacts"
-              className="inline-block rounded-[20px] font-bold bg-yellow-400 text-black px-6 py-4 shadow hover:opacity-95 transition"
+              className="inline-block rounded-[20px] font-bold bg-yellow text-black px-6 py-4 shadow hover:opacity-95 transition"
             >
               Demander un devis gratuit
             </Link>

@@ -28,7 +28,7 @@ const items = [
 export default function Services() {
   return (
     <section className="bg-white font-sans">
-      <div className="max-w-6xl mx-auto flex flex-col items-center px-4 sm:px-6 lg:px-8 py-16 md:py-24">
+      <div className="max-w-7xl mx-auto flex flex-col items-center px-4 sm:px-6 lg:px-8 py-16 md:py-24">
         <h2 className="max-w-2xl text-center font-mono text-blue text-4xl md:text-5xl lg:text-[64px] font-normal">
           Nos solutions pour votre succès
         </h2>
@@ -60,7 +60,7 @@ export default function Services() {
         <div className="mt-12 flex justify-center">
           <Link
             href="/contacts"
-            className="inline-block rounded-[20px] bg-yellow-400 text-black font-bold px-6 py-4 shadow hover:opacity-95 transition"
+            className="inline-block rounded-[20px] bg-yellow text-black font-bold px-6 py-4 shadow hover:opacity-95 transition"
           >
             Parlez-nous de votre projet
           </Link>

@@ -33,7 +33,7 @@ export default function Footer() {
             <ul className="space-y-4">
               {informations.map((i) => (
                 <li key={i.label}>
-                  <Link href={i.href} className="text-black/80 hover:text-black transition-colors">
+                  <Link href={i.href} className="text-black hover:text-black transition-colors">
                     {i.label}
                   </Link>
                 </li>
@@ -46,7 +46,7 @@ export default function Footer() {
             <ul className="space-y-4">
               {services.map((i) => (
                 <li key={i.label}>
-                  <Link href={i.href} className="text-black/80 hover:text-black transition-colors">
+                  <Link href={i.href} className="text-black hover:text-black transition-colors">
                     {i.label}
                   </Link>
                 </li>
@@ -59,7 +59,7 @@ export default function Footer() {
             <ul className="space-y-4">
               {ressources.map((i) => (
                 <li key={i.label}>
-                  <Link href={i.href} className="text-black/80 hover:text-black transition-colors">
+                  <Link href={i.href} className="text-black hover:text-black transition-colors">
                     {i.label}
                   </Link>
                 </li>
