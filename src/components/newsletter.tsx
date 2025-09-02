@@ -7,10 +7,9 @@ import { usePathname } from "next/navigation";
 export default function Newsletter() {
   const pathname = usePathname();
 
-  const blueRoutes = ["/", "/apropos", "/contacts"];
-  const greenRoutes = ["/services", "/comment-ca-marche"];
+  const routes = ["/services", "/comment-ca-marche"];
 
-  const isGreen = greenRoutes.some((r) => pathname === r || pathname?.startsWith(`${r}/`));
+  const isGreen = routes.some((r) => pathname === r || pathname?.startsWith(`${r}/`));
   const bgClass = isGreen ? "bg-green" : "bg-blue";
 
   return (

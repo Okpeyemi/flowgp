@@ -18,7 +18,7 @@ export function Header() {
 	const [open, setOpen] = useState(false);
 
 	return (
-		<header className="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-gray-100 font-sans relative">
+		<header className="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-gray-100 font-sans">
 			<div className="max-w-7xl mx-auto flex items-center justify-between px-4 sm:px-6 lg:px-8 h-20">
 				<Link
 					href="/"
@@ -63,7 +63,6 @@ export function Header() {
 						height={22}
 						className="rounded-full"
 					/>
-					{/* Mobile toggle (<= lg) */}
 					<button
 						type="button"
 						aria-label="Ouvrir/fermer le menu"
@@ -72,7 +71,6 @@ export function Header() {
 						className="lg:hidden inline-flex items-center justify-center rounded-md p-2 text-black hover:bg-black/5"
 					>
 						{open ? (
-							// Icon: close
 							<svg width="24" height="24" viewBox="0 0 24 24" fill="none">
 								<path
 									d="M6 6l12 12M18 6L6 18"
@@ -83,7 +81,6 @@ export function Header() {
 								/>
 							</svg>
 						) : (
-							// Icon: hamburger
 							<svg width="24" height="24" viewBox="0 0 24 24" fill="none">
 								<path
 									d="M4 6h16M4 12h16M4 18h16"
@@ -98,7 +95,6 @@ export function Header() {
 				</div>
 			</div>
 
-			{/* Mobile menu panel */}
 			<div
 				className={`lg:hidden ${open ? "block" : "hidden"} absolute inset-x-0 top-20 z-50 border-t border-gray-100 bg-white shadow-md`}
 			>

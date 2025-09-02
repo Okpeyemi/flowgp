@@ -6,7 +6,6 @@ export default function Section3() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
         <h2
           className="text-center text-yellow font-mono text-4xl md:text-5xl lg:text-[64px] font-normal"
-          style={{ fontFamily: "var(--font-russoone)" }}
         >
           03 Points forts
         </h2>

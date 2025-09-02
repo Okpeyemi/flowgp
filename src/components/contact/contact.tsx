@@ -43,7 +43,6 @@ export default function ContactForm() {
             className="w-full rounded-[12px] bg-[#F0F0F0] px-5 py-4 text-black placeholder-black/40 outline-none focus:ring-2 focus:ring-black/70"
           />
 
-          {/* Téléphone avec étiquette à gauche */}
           <div className="flex gap-2">
             <span className="select-none rounded-[12px] bg-[#F0F0F0] px-5 py-4 text-black/80 max-md:hidden">
               Téléphone

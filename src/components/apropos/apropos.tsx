@@ -18,7 +18,6 @@ export default function Apropos() {
         </p>
 
         <div className="mt-10 grid gap-10 lg:grid-cols-2 items-start">
-          {/* Colonne texte */}
           <div>
             <span className="inline-block rounded-[20px] bg-green text-white text-2xl font-bold px-8 py-2">
               Valeurs
@@ -33,7 +32,6 @@ export default function Apropos() {
             </p>
           </div>
 
-          {/* Espace image/illustration */}
           <div className="hidden lg:block">
             <div aria-hidden className="w-full h-72 bg-gray-200 rounded-md" />
           </div>
