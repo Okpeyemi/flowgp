@@ -61,7 +61,7 @@ export default function Footer() {
           </Link>
         </div>
 
-        <p className="mt-10 text-center text-xs text-white/80">
+        <p className="mt-10 text-center text-xl text-white/80">
           {year} FlowGP. Tous droits réservés.
         </p>
       </div>
