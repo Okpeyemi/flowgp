@@ -43,7 +43,6 @@ export default function Footer() {
                   +590691268401
                 </Link>
               </p>
-              <p>Adresse: [Votre adresse ou domiciliation].</p>
             </div>
 
           <div className="flex flex-col items-start lg:items-end gap-4">
