@@ -1,0 +1,13 @@
+{
+  "name": "FlowGP",
+  "short_name": "FlowGP",
+  "description": "Tunnels de vente, automatisation marketing et campagnes multi‑canal en Guadeloupe.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#0076d6",
+  "icons": [
+    { "src": "/favicon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/favicon-512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}
