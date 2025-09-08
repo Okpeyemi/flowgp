@@ -48,7 +48,68 @@ export default function Footer() {
 
           <div className="flex flex-col items-start lg:items-end gap-4">
             <p className="text-xl font-bold">Réseaux Sociaux :</p>
-            <Image src="/social.png" alt="Réseaux sociaux" width={190} height={40} />
+            <div className="flex items-center gap-4">
+              <Link
+                href="https://www.facebook.com/profile.php?id=61580360632496"
+                aria-label="Facebook"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center w-11 h-11 rounded-full bg-white/10 hover:bg-white/20 transition"
+              >
+                <Image
+                  src="/facebook.png"
+                  alt="Facebook"
+                  width={32}
+                  height={32}
+                  className="w-6 h-6 object-contain"
+                />
+              </Link>
+              <Link
+                href="#"
+                aria-label="Instagram"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center w-11 h-11 rounded-full bg-white/10 hover:bg-white/20 transition"
+              >
+                <Image
+                  src="/instagram.png"
+                  alt="Instagram"
+                  width={32}
+                  height={32}
+                  className="w-6 h-6 object-contain"
+                />
+              </Link>
+              <Link
+                href="#"
+                aria-label="TikTok"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center w-11 h-11 rounded-full bg-white/10 hover:bg-white/20 transition"
+              >
+                <Image
+                  src="/tiktok.png"
+                  alt="TikTok"
+                  width={32}
+                  height={32}
+                  className="w-8 h-8 object-contain"
+                />
+              </Link>
+              <Link
+                href="https://wa.me/590691268401"
+                aria-label="WhatsApp"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center w-11 h-11 rounded-full bg-white/10 hover:bg-white/20 transition"
+              >
+                <Image
+                  src="/whatsapp.png" 
+                  alt="WhatsApp"
+                  width={32}
+                  height={32}
+                  className="w-6 h-6 object-contain"
+                />
+              </Link>
+            </div>
           </div>
         </div>
 

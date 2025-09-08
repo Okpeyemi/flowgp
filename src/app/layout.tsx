@@ -3,6 +3,7 @@ import { Montserrat, Russo_One } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
+import WhatsAppButton from "@/components/WhatsAppButton";
 
 const montserrat = Montserrat({
   variable: "--font-montserrat",
@@ -104,12 +105,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="fr">
-      <body
-        className={`${montserrat.variable} ${russoOne.variable} antialiased`}
-      >
+      <body className={`${montserrat.variable} ${russoOne.variable} antialiased`}>
         <Header />
         {children}
         <Footer />
+        <WhatsAppButton />
       </body>
     </html>
   );
