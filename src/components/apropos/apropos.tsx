@@ -5,7 +5,7 @@ export default function Apropos() {
     <section className="bg-white font-sans">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
         <h2
-          className="text-center font-mono text-blue text-4xl md:text-5xl font-normal bg-[#F5F5F5] py-10 px-40 max-lg:px-10"
+          className="text-center font-mono text-blue text-4xl md:text-5xl font-normal"
         >
           FlowGP : votre allié marketing en Guadeloupe
         </h2>
@@ -25,15 +25,16 @@ export default function Apropos() {
             <p className="mt-4 text-black font-medium">
               Proximité ; performance ; innovation.
             </p>
+          </div>
 
+          <div className="flex items-end gap-2">
             <p className="mt-8 text-black/80">
               Fondé par [Votre Nom], passionné par l’innovation et le développement des entreprises
               antillaises.
             </p>
-          </div>
-
           <div className="hidden lg:block">
-            <div aria-hidden className="w-full h-72 bg-gray-200 rounded-md" />
+            <div aria-hidden className="w-72 h-72 bg-gray-200 rounded-md" />
+          </div>
           </div>
         </div>
       </div>
