@@ -65,7 +65,7 @@ export default function Footer() {
                 />
               </Link>
               <Link
-                href="#"
+                href="https://www.instagram.com/flowgp971?igsh=MTVwOGkyeHNyZGVpbA=="
                 aria-label="Instagram"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -77,21 +77,6 @@ export default function Footer() {
                   width={32}
                   height={32}
                   className="w-6 h-6 object-contain"
-                />
-              </Link>
-              <Link
-                href="#"
-                aria-label="TikTok"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center w-11 h-11 rounded-full bg-white/10 hover:bg-white/20 transition"
-              >
-                <Image
-                  src="/tiktok.png"
-                  alt="TikTok"
-                  width={32}
-                  height={32}
-                  className="w-8 h-8 object-contain"
                 />
               </Link>
               <Link
