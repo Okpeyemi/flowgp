@@ -39,8 +39,8 @@ export default function Footer() {
               </p>
               <p className="mb-2">
                 Téléphone:{" "}
-                <Link href="tel:+590000000" className="underline decoration-white/60 hover:decoration-white">
-                  +590 XXX XXX XXX
+                <Link href="tel:+590691268401" className="underline decoration-white/60 hover:decoration-white">
+                  +590691268401
                 </Link>
               </p>
               <p>Adresse: [Votre adresse ou domiciliation].</p>
