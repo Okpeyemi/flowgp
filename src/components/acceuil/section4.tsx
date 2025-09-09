@@ -12,7 +12,7 @@ export default function Section4() {
     <section className="bg-white font-sans">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24 text-center">
         <h2
-          className="font-mono text-black text-4xl md:text-5xl lg:text-[64px] font-normal"
+          className="text-black text-3xl md:text-5xl lg:text-[64px] font-black"
         >
           Des Résultats à Votre Portée
         </h2>

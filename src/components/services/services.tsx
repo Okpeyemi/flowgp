@@ -9,7 +9,7 @@ export default function Services() {
 	return (
 		<section className="bg-white font-sans">
 			<div className="max-w-7xl mx-auto flex flex-col items-center px-4 sm:px-6 lg:px-8 py-16 md:py-24">
-				<h2 className="max-w-2xl text-center font-mono text-blue text-4xl md:text-5xl font-normal">
+				<h2 className="max-w-2xl text-center text-blue text-3xl md:text-5xl font-black">
 					Nos solutions pour votre succès
 				</h2>
 
@@ -39,7 +39,7 @@ export default function Services() {
 										width={isLarge ? 420 : 300}
 										height={isLarge ? 420 : 300}
 										className={`${
-											isLarge ? "w-72 h-72" : "w-60 h-60"
+											isLarge ? "w-64 h-64" : "w-60 h-60"
 										} rounded-md object-cover`}
 										priority={s < 2}
 									/>

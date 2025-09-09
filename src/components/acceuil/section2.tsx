@@ -5,9 +5,14 @@ export default function Section2() {
     <section className="bg-green text-white font-sans">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24 text-center">
         <h2
-          className="font-mono text-yellow text-4xl md:text-5xl lg:text-[64px] font-normal"
+          className="max-sm:hidden text-yellow text-3xl md:text-5xl lg:text-[64px] font-black"
         >
           Pourquoi FlowGP ?
+        </h2>
+        <h2
+          className="max-sm:block hidden text-yellow text-3xl md:text-5xl lg:text-[64px] font-black"
+        >
+          Pourquoi <br /> FlowGP ?
         </h2>
 
         <p className="mt-8 text-base sm:text-lg lg:text-2xl leading-relaxed">

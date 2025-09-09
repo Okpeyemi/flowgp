@@ -5,7 +5,7 @@ export default function Apropos() {
     <section className="bg-white font-sans">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
         <h2
-          className="text-center font-mono text-blue text-4xl md:text-5xl font-normal"
+          className="text-center text-blue text-3xl md:text-5xl font-black"
         >
           FlowGP : votre allié marketing en Guadeloupe
         </h2>
@@ -19,7 +19,7 @@ export default function Apropos() {
 
         <div className="mt-10 grid gap-10 lg:grid-cols-2 items-start">
           <div>
-            <span className="inline-block rounded-[20px] bg-green text-white text-2xl font-bold px-8 py-2">
+            <span className="inline-block rounded-[20px] bg-green text-white text-xl font-bold px-8 py-2">
               Valeurs
             </span>
             <p className="mt-4 text-black font-medium">

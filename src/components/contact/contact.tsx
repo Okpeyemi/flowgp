@@ -26,7 +26,7 @@ export default function ContactForm() {
   return (
     <section className="bg-white font-sans">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
-        <h1 className="text-center font-mono text-blue text-4xl md:text-5xl font-extrabold">
+        <h1 className="text-center text-blue text-3xl md:text-5xl font-black">
           Lancez votre croissance
           <br /> avec FlowGP
         </h1>

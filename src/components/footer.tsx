@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { COMPANY_EMAIL, COMPANY_PHONE, COMPANY_PHONE_DISPLAY, WHATSAPP_NUMBER, buildMailto } from "@/lib/contact";
+import { COMPANY_EMAIL, COMPANY_PHONE, COMPANY_PHONE_DISPLAY, COMPANY_ADRESS, WHATSAPP_NUMBER, buildMailto } from "@/lib/contact";
 
 export default function Footer() {
   const pathname = usePathname();
@@ -18,7 +18,7 @@ export default function Footer() {
   return (
     <section className={`font-sans ${bgClass} text-white`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
-        <div className="flex max-md:flex-col items-start justify-between gap-6">
+        <div className="flex max-md:flex-col items-center md:items-start justify-between gap-6">
             <Image
               src="/flow-white.png"
               alt="FlowGP"
@@ -27,7 +27,7 @@ export default function Footer() {
               className="shrink-0"
               priority
             />
-            <div>
+            <div className="flex flex-col items-center">
               <p className="text-xl font-bold mb-2">Coordonnées :</p>
               <p className="mb-2">
                 Email:{" "}
@@ -47,9 +47,13 @@ export default function Footer() {
                   {COMPANY_PHONE_DISPLAY}
                 </Link>
               </p>
+              <p className="mb-2">
+                Adresse:{" "}
+                  {COMPANY_ADRESS}
+              </p>
             </div>
 
-          <div className="flex flex-col items-start lg:items-end gap-4">
+          <div className="flex flex-col items-center md:items-start gap-4">
             <p className="text-xl font-bold">Réseaux Sociaux :</p>
             <div className="flex items-center gap-4">
               <Link
@@ -104,9 +108,15 @@ export default function Footer() {
         <div className="mt-10 flex justify-center">
           <Link
             href={buildMailto("Prise de contact FlowGP")}
-            className="bg-yellow text-black font-semibold rounded-[20px] px-6 py-4 shadow hover:opacity-95 transition"
+            className="bg-yellow max-md:hidden text-black font-bold rounded-[20px] px-6 py-4 shadow hover:opacity-95 transition"
           >
             Prêt à démarrer ? Contactez-nous !
+          </Link>
+          <Link
+            href={buildMailto("Prise de contact FlowGP")}
+            className="bg-yellow md:hidden w-full text-center text-black font-bold rounded-[20px] px-6 py-4 shadow hover:opacity-95 transition"
+          >
+            Prêt à démarrer ? <br /> Contactez-nous !
           </Link>
         </div>
 

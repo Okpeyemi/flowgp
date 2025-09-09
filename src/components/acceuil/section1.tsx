@@ -6,9 +6,9 @@ import Link from "next/link";
 export default function Section1() {
   return (
     <section className="relative overflow-hidden bg-white font-sans">
-      <div className="max-w-7xl mx-auto grid gap-10 lg:grid-cols-2 items-center px-4 sm:px-6 lg:px-8 py-16 lg:py-24 mb-50 max-md:mb-30">
+      <div className="max-w-7xl mx-auto grid gap-10 lg:grid-cols-2 items-start px-4 sm:px-6 lg:px-8 py-16 lg:py-24 mb-50 max-md:mb-30">
         <div>
-          <h1 className="font-mono leading-tight text-4xl md:text-5xl lg:text-[64px] font-black">
+          <h1 className="leading-tight text-3xl md:text-5xl lg:text-[64px] font-black">
             <span className="text-blue">FlowGP</span>
             <span className="text-black"> : Boostez</span>
             <br />
@@ -32,12 +32,13 @@ export default function Section1() {
           </div>
         </div>
 
-        <div className="flex justify-center lg:justify-end">
+        <div className="flex justify-center lg:justify-end mt-0 lg:-mt-5">
           <Image
             src="/image-brand.png"
             alt="Illustration de conversion et croissance"
-            width={852}
-            height={568}
+            width={1100}
+            height={734}
+            className="w-full max-w-[1100px] h-auto"
             priority
           />
         </div>
