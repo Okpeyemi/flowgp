@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
+import { SITE_URL } from "@/lib/site";
 
 const montserrat = Montserrat({
   variable: "--font-montserrat",
@@ -18,7 +19,7 @@ const russoOne = Russo_One({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://www.flowgp.fr"),
+  metadataBase: new URL(SITE_URL),
   applicationName: "FlowGP",
   title: {
     default: "FlowGP | Tunnels de Vente & Automatisation Marketing en Guadeloupe",
@@ -48,7 +49,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "fr_FR",
-    url: "https://www.flowgp.fr/",
+    url: `${SITE_URL}`,
     siteName: "FlowGP",
     title: "FlowGP | Automatisation & Tunnels de Vente",
     description:

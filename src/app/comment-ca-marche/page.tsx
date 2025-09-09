@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import CommentCaMarche from "@/components/commentçamarche/commentçamarche";
+import { SITE_URL } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Méthode | FlowGP",
@@ -16,7 +17,7 @@ export const metadata: Metadata = {
     title: "Comment ça marche – Méthode FlowGP",
     description:
       "Un cadre structuré pour générer et convertir vos leads durablement.",
-    url: "https://www.flowgp.fr/comment-ca-marche",
+    url: `${SITE_URL}/comment-ca-marche`,
   },
 };
 

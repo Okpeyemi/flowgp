@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import ContactForm from "@/components/contact/contact";
+import { SITE_URL } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Contact | FlowGP",
@@ -14,9 +15,8 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: "Contact FlowGP",
-    description:
-      "Expliquez-nous votre besoin : nous revenons sous 24h.",
-    url: "https://www.flowgp.fr/contacts",
+    description: "Expliquez-nous votre besoin : nous revenons sous 24h.",
+    url: `${SITE_URL}/contacts`,
   },
 };
 

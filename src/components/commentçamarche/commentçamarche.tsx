@@ -2,28 +2,7 @@
 
 import Link from "next/link";
 
-const steps = [
-  {
-    title: "Analyse",
-    desc:
-      "Nous étudions vos besoins et votre audience pour définir une stratégie adaptée.",
-  },
-  {
-    title: "Création",
-    desc:
-      "Nous concevons des tunnels de vente et campagnes multi‑canal sur mesure.",
-  },
-  {
-    title: "Automatisation",
-    desc:
-      "Mise en place de processus automatisés pour fluidifier vos opérations.",
-  },
-  {
-    title: "Optimisation",
-    desc:
-      "Utilisation de l’IA pour analyser et améliorer les performances en continu.",
-  },
-];
+import { COMMENTÇAMARCHE } from "@/lib/commentçamarche";
 
 export default function CommentCaMarche() {
   return (
@@ -36,13 +15,13 @@ export default function CommentCaMarche() {
         </h2>
 
         <div className="mt-12 space-y-10 max-w-5xl mx-auto">
-          {steps.map((s) => (
+          {COMMENTÇAMARCHE.map((c) => (
             <div
-              key={s.title}
+              key={c.title}
               className="grid md:grid-cols-[1fr_3fr] gap-6 md:gap-10 items-start"
             >
-              <h3 className="text-black text-2xl md:text-3xl font-bold">{s.title}</h3>
-              <p className="text-black text-base sm:text-lg lg:text-2xl leading-relaxed">{s.desc}</p>
+              <h3 className="text-black text-2xl md:text-3xl font-bold">{c.title}</h3>
+              <p className="text-black text-base sm:text-lg lg:text-2xl leading-relaxed">{c.desc}</p>
             </div>
           ))}
         </div>

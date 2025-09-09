@@ -1,6 +1,7 @@
 "use client";
 
 import { FormEvent } from "react";
+import { COMPANY_EMAIL } from "@/lib/contact";
 
 export default function ContactForm() {
   const onSubmit = (e: FormEvent<HTMLFormElement>) => {
@@ -13,7 +14,7 @@ export default function ContactForm() {
     const tel = (data.get("tel") || "").toString();
     const besoin = (data.get("besoin") || "").toString();
 
-    const to = "contact@flowgp.fr";
+    const to = COMPANY_EMAIL;
     const subject = encodeURIComponent(`Contact FlowGP - ${nom || "Nouvelle demande"}`);
     const body = encodeURIComponent(
       `Nom: ${nom}\nEmail: ${mail}\nTéléphone: ${tel}\n\nBesoin:\n${besoin}\n`

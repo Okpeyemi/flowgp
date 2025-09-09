@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Apropos from "@/components/apropos/apropos";
+import { SITE_URL } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "À propos | FlowGP",
@@ -16,7 +17,7 @@ export const metadata: Metadata = {
     title: "À propos de FlowGP",
     description:
       "Innovation marketing et proximité pour les entreprises guadeloupéennes.",
-    url: "https://www.flowgp.fr/apropos",
+    url: `${SITE_URL}/apropos`,
   },
 };
 

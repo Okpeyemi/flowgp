@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { COMPANY_EMAIL, COMPANY_PHONE, COMPANY_PHONE_DISPLAY, WHATSAPP_NUMBER, buildMailto } from "@/lib/contact";
 
 export default function Footer() {
   const pathname = usePathname();
@@ -31,16 +32,19 @@ export default function Footer() {
               <p className="mb-2">
                 Email:{" "}
                 <Link
-                  href="mailto:contact@flowgp.fr"
+                  href={`mailto:${COMPANY_EMAIL}`}
                   className="underline decoration-white/60 hover:decoration-white"
                 >
-                  contact@flowgp.fr
+                  {COMPANY_EMAIL}
                 </Link>
               </p>
               <p className="mb-2">
                 Téléphone:{" "}
-                <Link href="tel:+590691268401" className="underline decoration-white/60 hover:decoration-white">
-                  +590691268401
+                <Link
+                  href={`tel:${COMPANY_PHONE}`}
+                  className="underline decoration-white/60 hover:decoration-white"
+                >
+                  {COMPANY_PHONE_DISPLAY}
                 </Link>
               </p>
             </div>
@@ -79,7 +83,7 @@ export default function Footer() {
                 />
               </Link>
               <Link
-                href="https://wa.me/590691268401"
+                href={`https://wa.me/${WHATSAPP_NUMBER}`}
                 aria-label="WhatsApp"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -99,7 +103,7 @@ export default function Footer() {
 
         <div className="mt-10 flex justify-center">
           <Link
-            href="mailto:contact@flowgp.fr?subject=Prise%20de%20contact%20FlowGP"
+            href={buildMailto("Prise de contact FlowGP")}
             className="bg-yellow text-black font-semibold rounded-[20px] px-6 py-4 shadow hover:opacity-95 transition"
           >
             Prêt à démarrer ? Contactez-nous !
