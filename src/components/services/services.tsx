@@ -28,7 +28,7 @@ export default function Services() {
 									<h3 className="text-black text-base sm:text-lg lg:text-2xl font-bold">
 										{sol.title}
 									</h3>
-									<p className="mt-3 text-black text-sm md:text-base leading-relaxed">
+									<p className="mt-3 text-black text-sm md:text-base text-justify leading-relaxed">
 										{sol.desc}
 									</p>
 								</div>

@@ -17,7 +17,7 @@ export default function Section1() {
             <span className="text-black">Guadeloupe</span>
           </h1>
 
-          <p className="mt-6 text-black/80 text-base sm:text-lg lg:text-2xl max-w-xl">
+          <p className="mt-6 text-black/80 text-base text-justify sm:text-lg lg:text-2xl max-w-xl">
             Transformez vos prospects en clients avec des tunnels de vente
             optimisés, des processus automatisés et des campagnes multi‑canal.
           </p>

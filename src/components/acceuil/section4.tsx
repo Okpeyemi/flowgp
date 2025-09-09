@@ -17,7 +17,7 @@ export default function Section4() {
           Des Résultats à Votre Portée
         </h2>
 
-        <p className="mt-6 text-black text-base sm:text-lg lg:text-2xl leading-relaxed">
+        <p className="mt-6 text-black text-base text-center sm:text-lg lg:text-2xl leading-relaxed">
           Nos solutions augmentent vos conversions en combinant technologie moderne et
           expertise locale. Que vous soyez dans le tourisme, le commerce ou les services,
           nous boostons votre croissance.

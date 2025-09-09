@@ -121,7 +121,7 @@ export default function Footer() {
         </div>
 
         <p className="mt-10 text-center text-xl text-white/80">
-          {year} FlowGP. Tous droits réservés.
+          © {year} FlowGP. Tous droits réservés.
         </p>
       </div>
 
