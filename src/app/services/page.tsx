@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Services from "@/components/services/services";
 import { SITE_URL } from "@/lib/site";
-import Script from "next/script";
 import JsonLd from "@/components/seo/JsonLd";
 import { SOLUTIONS } from "@/lib/solutions";
 
