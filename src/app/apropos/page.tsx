@@ -13,7 +13,7 @@ import {
 } from "@/lib/contact";
 
 export const metadata: Metadata = {
-  title: "À propos | FlowGP",
+  title: "À propos",
   description:
     "FlowGP : partenaire local en Guadeloupe pour la croissance via tunnels de vente, IA et automatisation.",
   alternates: { canonical: "/apropos" },

@@ -5,7 +5,7 @@ import Script from "next/script";
 import { COMMENTÇAMARCHE } from "@/lib/commentçamarche";
 
 export const metadata: Metadata = {
-  title: "Comment ça marche – Méthode FlowGP | FlowGP",
+  title: "Comment ça marche – Méthode FlowGP",
   description:
     "Méthode FlowGP : analyse, création, automatisation puis optimisation continue grâce à l’IA.",
   alternates: { canonical: "/comment-ca-marche" },

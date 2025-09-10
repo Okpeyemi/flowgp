@@ -13,7 +13,7 @@ import {
 } from "@/lib/contact";
 
 export const metadata: Metadata = {
-  title: "Contact | FlowGP",
+  title: "Contact",
   description:
     "Contactez FlowGP : questions, devis ou démarrage de votre projet marketing et automatisation.",
   alternates: { canonical: "/contacts" },
