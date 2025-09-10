@@ -5,7 +5,7 @@ import Script from "next/script";
 import { SOLUTIONS } from "@/lib/solutions";
 
 export const metadata: Metadata = {
-  title: "Services marketing – Tunnels de Vente, Automatisation & IA | FlowGP",
+  title: "Services marketing – Tunnels de Vente, Automatisation & IA",
   description:
     "Services marketing FlowGP : tunnels de vente, automatisation des processus, campagnes multi‑canal et optimisation IA pour votre business en Guadeloupe.",
   alternates: { canonical: "/services" },
