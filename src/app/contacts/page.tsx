@@ -50,7 +50,6 @@ export const metadata: Metadata = {
 export default function ContactsPage() {
   return (
     <main>
-      <h1 className="sr-only">Contacts</h1>
       <ContactForm />
       {/* Replace next/script with SSR JSON-LD */}
       <JsonLd
