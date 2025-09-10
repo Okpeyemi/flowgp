@@ -164,6 +164,3 @@ git push origin feature/ma-fonctionnalite
 Indiquez ici la licence du projet (ex: MIT, Apache-2.0).  
 Si aucune licence n’est précisée, le projet est « All rights reserved » par défaut.
 
-## Auteur
-
-- @Okpeyemi — Propriétaire du dépôt
