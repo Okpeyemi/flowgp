@@ -50,6 +50,7 @@ export const metadata: Metadata = {
 export default function ContactsPage() {
   return (
     <main>
+      <h1 className="sr-only">Contacts</h1>
       <ContactForm />
       <Script
         id="schema-org-contactpage"
