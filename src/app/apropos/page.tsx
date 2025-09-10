@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Apropos from "@/components/apropos/apropos";
 import { SITE_URL } from "@/lib/site";
 import Script from "next/script";
+import JsonLd from "@/components/seo/JsonLd";
 import {
   COMPANY_NAME,
   COMPANY_EMAIL,
@@ -54,34 +55,29 @@ export default function AproposPage() {
     <main>
       <h1 className="sr-only">À propos de FlowGP</h1>
       <Apropos />
-
-      <Script
+      <JsonLd
         id="schema-org-aboutpage"
-        type="application/ld+json"
-        strategy="afterInteractive"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "AboutPage",
-            name: "À propos de FlowGP",
-            url: `${SITE_URL}/apropos`,
-            description:
-              "FlowGP : partenaire local en Guadeloupe pour la croissance via tunnels de vente, IA et automatisation.",
-            about: {
-              "@type": "Organization",
-              name: COMPANY_NAME,
-              url: SITE_URL,
-              logo: `${SITE_URL}/flow-default.png`,
-              email: COMPANY_EMAIL,
-              telephone: COMPANY_PHONE,
-              address: COMPANY_ADRESS,
-              sameAs: [
-                `${FACEBOOK_PROFIL}`,
-                `${INSTAGRAM_PROFIL}`,
-                `https://wa.me/${WHATSAPP_NUMBER}`,
-              ],
-            },
-          }),
+        data={{
+          "@context": "https://schema.org",
+          "@type": "AboutPage",
+          name: "À propos de FlowGP",
+          url: `${SITE_URL}/apropos`,
+          description:
+            "FlowGP : partenaire local en Guadeloupe pour la croissance via tunnels de vente, IA et automatisation.",
+          about: {
+            "@type": "Organization",
+            name: COMPANY_NAME,
+            url: SITE_URL,
+            logo: `${SITE_URL}/flow-default.png`,
+            email: COMPANY_EMAIL,
+            telephone: COMPANY_PHONE,
+            address: COMPANY_ADRESS,
+            sameAs: [
+              `${FACEBOOK_PROFIL}`,
+              `${INSTAGRAM_PROFIL}`,
+              `https://wa.me/${WHATSAPP_NUMBER}`,
+            ],
+          },
         }}
       />
     </main>

@@ -4,7 +4,7 @@ import "./globals.css";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
-import Script from "next/script";
+import JsonLd from "@/components/seo/JsonLd";
 import { SITE_URL } from "@/lib/site";
 import {
   COMPANY_NAME,
@@ -124,44 +124,36 @@ export default function RootLayout({
         {children}
         <Footer />
         <WhatsAppButton />
-        <Script
+        <JsonLd
           id="schema-org-organization"
-          type="application/ld+json"
-          strategy="afterInteractive"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "Organization",
-              name: COMPANY_NAME,
-              url: SITE_URL,
-              logo: `${SITE_URL}/flow-default.png`,
-              email: COMPANY_EMAIL,
-              telephone: COMPANY_PHONE,
-              address: COMPANY_ADRESS,
-              sameAs: [
-                `${FACEBOOK_PROFIL}`,
-                `${INSTAGRAM_PROFIL}`,
-                `https://wa.me/${WHATSAPP_NUMBER}`,
-              ],
-            }),
+          data={{
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            name: COMPANY_NAME,
+            url: SITE_URL,
+            logo: `${SITE_URL}/flow-default.png`,
+            email: COMPANY_EMAIL,
+            telephone: COMPANY_PHONE,
+            address: COMPANY_ADRESS,
+            sameAs: [
+              `${FACEBOOK_PROFIL}`,
+              `${INSTAGRAM_PROFIL}`,
+              `https://wa.me/${WHATSAPP_NUMBER}`,
+            ],
           }}
         />
-        <Script
+        <JsonLd
           id="schema-org-website"
-          type="application/ld+json"
-          strategy="afterInteractive"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "WebSite",
-              name: COMPANY_NAME,
-              url: SITE_URL,
-              potentialAction: {
-                "@type": "SearchAction",
-                target: `${SITE_URL}/?q={search_term_string}`,
-                "query-input": "required name=search_term_string",
-              },
-            }),
+          data={{
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            name: COMPANY_NAME,
+            url: SITE_URL,
+            potentialAction: {
+              "@type": "SearchAction",
+              target: `${SITE_URL}/?q={search_term_string}`,
+              "query-input": "required name=search_term_string",
+            },
           }}
         />
       </body>

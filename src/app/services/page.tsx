@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Services from "@/components/services/services";
 import { SITE_URL } from "@/lib/site";
 import Script from "next/script";
+import JsonLd from "@/components/seo/JsonLd";
 import { SOLUTIONS } from "@/lib/solutions";
 
 export const metadata: Metadata = {
@@ -49,37 +50,33 @@ export default function ServicesPage() {
         Services marketing – Tunnels de Vente, Automatisation & IA
       </h1>
       <Services />
-      <Script
+      <JsonLd
         id="schema-org-services"
-        type="application/ld+json"
-        strategy="afterInteractive"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "CollectionPage",
-            name: "Services marketing – FlowGP",
-            url: `${SITE_URL}/services`,
-            description:
-              "Tunnels de vente, automatisation, campagnes multi‑canal et optimisation IA.",
-            mainEntity: {
-              "@type": "ItemList",
-              itemListElement: SOLUTIONS.map((s, i) => ({
-                "@type": "ListItem",
-                position: i + 1,
-                item: {
-                  "@type": "Service",
-                  name: s.title,
-                  description: s.desc,
-                  image: `${SITE_URL}${s.image}`,
-                  provider: {
-                    "@type": "Organization",
-                    name: "FlowGP",
-                    url: SITE_URL,
-                  },
+        data={{
+          "@context": "https://schema.org",
+          "@type": "CollectionPage",
+          name: "Services marketing – FlowGP",
+          url: `${SITE_URL}/services`,
+          description:
+            "Tunnels de vente, automatisation, campagnes multi‑canal et optimisation IA.",
+          mainEntity: {
+            "@type": "ItemList",
+            itemListElement: SOLUTIONS.map((s, i) => ({
+              "@type": "ListItem",
+              position: i + 1,
+              item: {
+                "@type": "Service",
+                name: s.title,
+                description: s.desc,
+                image: `${SITE_URL}${s.image}`,
+                provider: {
+                  "@type": "Organization",
+                  name: "FlowGP",
+                  url: SITE_URL,
                 },
-              })),
-            },
-          }),
+              },
+            })),
+          },
         }}
       />
     </main>

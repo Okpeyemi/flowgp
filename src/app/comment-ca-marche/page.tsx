@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import CommentCaMarche from "@/components/commentçamarche/commentçamarche";
 import { SITE_URL } from "@/lib/site";
-import Script from "next/script";
+import JsonLd from "@/components/seo/JsonLd";
 import { COMMENTÇAMARCHE } from "@/lib/commentçamarche";
 
 export const metadata: Metadata = {
@@ -46,25 +46,21 @@ export default function CommentCaMarchePage() {
     <main>
       <h1 className="sr-only">Comment ça marche – Méthode FlowGP</h1>
       <CommentCaMarche />
-      <Script
+      <JsonLd
         id="schema-org-howto"
-        type="application/ld+json"
-        strategy="afterInteractive"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "HowTo",
-            name: "Comment ça marche – Méthode FlowGP",
-            url: `${SITE_URL}/comment-ca-marche`,
-            description:
-              "Méthode FlowGP : analyse, création, automatisation puis optimisation continue grâce à l’IA.",
-            step: COMMENTÇAMARCHE.map((s, idx) => ({
-              "@type": "HowToStep",
-              position: idx + 1,
-              name: s.title,
-              text: s.desc,
-            })),
-          }),
+        data={{
+          "@context": "https://schema.org",
+          "@type": "HowTo",
+          name: "Comment ça marche – Méthode FlowGP",
+          url: `${SITE_URL}/comment-ca-marche`,
+          description:
+            "Méthode FlowGP : analyse, création, automatisation puis optimisation continue grâce à l’IA.",
+          step: COMMENTÇAMARCHE.map((s, idx) => ({
+            "@type": "HowToStep",
+            position: idx + 1,
+            name: s.title,
+            text: s.desc,
+          })),
         }}
       />
     </main>

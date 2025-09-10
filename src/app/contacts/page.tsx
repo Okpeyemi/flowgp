@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import ContactForm from "@/components/contact/contact";
 import { SITE_URL } from "@/lib/site";
-import Script from "next/script";
+import JsonLd from "@/components/seo/JsonLd";
 import {
   COMPANY_NAME,
   COMPANY_EMAIL,
@@ -52,41 +52,37 @@ export default function ContactsPage() {
     <main>
       <h1 className="sr-only">Contacts</h1>
       <ContactForm />
-      <Script
+      {/* Replace next/script with SSR JSON-LD */}
+      <JsonLd
         id="schema-org-contactpage"
-        type="application/ld+json"
-        strategy="afterInteractive"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "ContactPage",
-            name: "Contact FlowGP",
-            url: `${SITE_URL}/contacts`,
-            description:
-              "Expliquez-nous votre besoin : nous revenons sous 24h.",
-            about: {
-              "@type": "Organization",
-              name: COMPANY_NAME,
-              url: SITE_URL,
-              logo: `${SITE_URL}/flow-default.png`,
+        data={{
+          "@context": "https://schema.org",
+          "@type": "ContactPage",
+          name: "Contact FlowGP",
+          url: `${SITE_URL}/contacts`,
+          description: "Expliquez-nous votre besoin : nous revenons sous 24h.",
+          about: {
+            "@type": "Organization",
+            name: COMPANY_NAME,
+            url: SITE_URL,
+            logo: `${SITE_URL}/flow-default.png`,
+            email: COMPANY_EMAIL,
+            telephone: COMPANY_PHONE,
+            address: COMPANY_ADRESS,
+            sameAs: [
+              `${FACEBOOK_PROFIL}`,
+              `${INSTAGRAM_PROFIL}`,
+              `https://wa.me/${WHATSAPP_NUMBER}`,
+            ],
+            contactPoint: {
+              "@type": "ContactPoint",
+              contactType: "customer support",
               email: COMPANY_EMAIL,
               telephone: COMPANY_PHONE,
-              address: COMPANY_ADRESS,
-              sameAs: [
-                `${FACEBOOK_PROFIL}`,
-                `${INSTAGRAM_PROFIL}`,
-                `https://wa.me/${WHATSAPP_NUMBER}`,
-              ],
-              contactPoint: {
-                "@type": "ContactPoint",
-                contactType: "customer support",
-                email: COMPANY_EMAIL,
-                telephone: COMPANY_PHONE,
-                availableLanguage: ["fr-FR"],
-                areaServed: "GP",
-              },
+              availableLanguage: ["fr-FR"],
+              areaServed: "GP",
             },
-          }),
+          },
         }}
       />
     </main>
