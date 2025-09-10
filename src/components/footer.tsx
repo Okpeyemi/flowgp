@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { COMPANY_EMAIL, COMPANY_PHONE, COMPANY_PHONE_DISPLAY, COMPANY_ADRESS, WHATSAPP_NUMBER, buildMailto } from "@/lib/contact";
+import { COMPANY_EMAIL, COMPANY_PHONE, COMPANY_PHONE_DISPLAY, COMPANY_ADRESS, WHATSAPP_NUMBER, buildMailto, FACEBOOK_PROFIL, INSTAGRAM_PROFIL } from "@/lib/contact";
 
 export default function Footer() {
   const pathname = usePathname();
@@ -57,7 +57,7 @@ export default function Footer() {
             <p className="text-xl font-bold">Réseaux Sociaux :</p>
             <div className="flex items-center gap-4">
               <Link
-                href="https://www.facebook.com/profile.php?id=61580360632496"
+                href={`${FACEBOOK_PROFIL}`}
                 aria-label="Facebook"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -72,7 +72,7 @@ export default function Footer() {
                 />
               </Link>
               <Link
-                href="https://www.instagram.com/flowgp971?igsh=MTVwOGkyeHNyZGVpbA=="
+                href={`${INSTAGRAM_PROFIL}`}
                 aria-label="Instagram"
                 target="_blank"
                 rel="noopener noreferrer"

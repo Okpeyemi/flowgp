@@ -6,7 +6,15 @@ import Footer from "@/components/footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import Script from "next/script";
 import { SITE_URL } from "@/lib/site";
-import { COMPANY_NAME, COMPANY_EMAIL, COMPANY_PHONE, COMPANY_ADRESS, WHATSAPP_NUMBER } from "@/lib/contact";
+import {
+  COMPANY_NAME,
+  COMPANY_EMAIL,
+  COMPANY_PHONE,
+  COMPANY_ADRESS,
+  WHATSAPP_NUMBER,
+  FACEBOOK_PROFIL,
+  INSTAGRAM_PROFIL,
+} from "@/lib/contact";
 
 const montserrat = Montserrat({
   variable: "--font-montserrat",
@@ -24,7 +32,8 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   applicationName: "FlowGP",
   title: {
-    default: "FlowGP | Tunnels de Vente & Automatisation Marketing en Guadeloupe",
+    default:
+      "FlowGP | Tunnels de Vente & Automatisation Marketing en Guadeloupe",
     template: "%s | FlowGP",
   },
   description:
@@ -108,7 +117,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="fr">
-      <body className={`${montserrat.variable} ${russoOne.variable} antialiased`}>
+      <body
+        className={`${montserrat.variable} ${russoOne.variable} antialiased`}
+      >
         <Header />
         {children}
         <Footer />
@@ -128,8 +139,8 @@ export default function RootLayout({
               telephone: COMPANY_PHONE,
               address: COMPANY_ADRESS,
               sameAs: [
-                "https://www.facebook.com/profile.php?id=61580360632496",
-                "https://www.instagram.com/flowgp971?igsh=MTVwOGkyeHNyZGVpbA==",
+                `${FACEBOOK_PROFIL}`,
+                `${INSTAGRAM_PROFIL}`,
                 `https://wa.me/${WHATSAPP_NUMBER}`,
               ],
             }),
