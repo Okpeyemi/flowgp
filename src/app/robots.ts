@@ -1,14 +1,14 @@
 import type { MetadataRoute } from "next";
+import { SITE_URL } from "@/lib/site";
 
 export default function robots(): MetadataRoute.Robots {
-  const base = process.env.NEXT_PUBLIC_SITE_URL || "https://www.flowgp.fr";
   return {
     rules: {
       userAgent: "*",
       allow: "/",
       disallow: ["/api/", "/admin"],
     },
-    sitemap: `${base}/sitemap.xml`,
-    host: base,
+    sitemap: `${SITE_URL}/sitemap.xml`,
+    host: SITE_URL,
   };
 }

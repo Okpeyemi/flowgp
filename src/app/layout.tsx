@@ -4,7 +4,9 @@ import "./globals.css";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
+import Script from "next/script";
 import { SITE_URL } from "@/lib/site";
+import { COMPANY_NAME, COMPANY_EMAIL, COMPANY_PHONE, COMPANY_ADRESS, WHATSAPP_NUMBER } from "@/lib/contact";
 
 const montserrat = Montserrat({
   variable: "--font-montserrat",
@@ -26,7 +28,7 @@ export const metadata: Metadata = {
     template: "%s | FlowGP",
   },
   description:
-    "FlowGP conçoit des tunnels de vente, automatise vos processus marketing et orchestre des campagnes multi‑canal optimisées par l’IA pour développer votre activité en Guadeloupe.",
+    "Tunnels de vente, automatisations et campagnes multi‑canal optimisées par l’IA pour booster votre croissance en Guadeloupe.",
   keywords: [
     "tunnel de vente",
     "automatisation marketing",
@@ -91,11 +93,11 @@ export const metadata: Metadata = {
   manifest: "/site.webmanifest",
   icons: {
     icon: [
-      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
-      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
-      { url: "/favicon.ico", sizes: "any" },
+      { url: "/flow-default.png", sizes: "32x32", type: "image/png" },
+      { url: "/flow-default.png", sizes: "16x16", type: "image/png" },
+      { url: "/flow-default.png", sizes: "any" },
     ],
-    apple: [{ url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" }],
+    apple: [{ url: "/flow-default.png", sizes: "180x180", type: "image/png" }],
   },
 };
 
@@ -111,6 +113,46 @@ export default function RootLayout({
         {children}
         <Footer />
         <WhatsAppButton />
+        <Script
+          id="schema-org-organization"
+          type="application/ld+json"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              name: COMPANY_NAME,
+              url: SITE_URL,
+              logo: `${SITE_URL}/flow-default.png`,
+              email: COMPANY_EMAIL,
+              telephone: COMPANY_PHONE,
+              address: COMPANY_ADRESS,
+              sameAs: [
+                "https://www.facebook.com/profile.php?id=61580360632496",
+                "https://www.instagram.com/flowgp971?igsh=MTVwOGkyeHNyZGVpbA==",
+                `https://wa.me/${WHATSAPP_NUMBER}`,
+              ],
+            }),
+          }}
+        />
+        <Script
+          id="schema-org-website"
+          type="application/ld+json"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebSite",
+              name: COMPANY_NAME,
+              url: SITE_URL,
+              potentialAction: {
+                "@type": "SearchAction",
+                target: `${SITE_URL}/?q={search_term_string}`,
+                "query-input": "required name=search_term_string",
+              },
+            }),
+          }}
+        />
       </body>
     </html>
   );
